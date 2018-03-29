@@ -114,9 +114,9 @@ Broker Compatibility
 ====================
 The Python client (as well as the underlying C library librdkafka) supports
 all broker versions &gt;= 0.8.
-But due to the nature of the Kafka protocol in broker versions 0.8 and 0.9 it
-is not safe for a client to assume what protocol version is actually supported
-by the broker, thus you will need to hint the Python client what protocol
+However, Kafka protocol in broker versions 0.8 and 0.9, a
+dangerous situation occurs when a client assumes the protocol version supported
+by the broker. You will need to hint the Python client what protocol
 version it may use. This is done through two configuration settings:
 
  * `broker.version.fallback=YOUR_BROKER_VERSION` (default 0.9.0.1)
